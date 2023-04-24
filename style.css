@@ -12,7 +12,7 @@ body {
   text-align: right;
 }
 
-.eisenhower-container img {
+.eisenhower-container #matrix {
   width: 100%;
 }
 
@@ -42,7 +42,8 @@ body {
   display: flex;
 }
 
-ul {
+#incomplete,
+#completed {
   margin: 0;
   padding: 0px;
 }
@@ -57,7 +58,7 @@ button {
   outline: none;
 }
 
-button {
+.task-btn {
   background: none;
   border: 0px;
   color: #888;
@@ -67,13 +68,12 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.task-btn:hover {
   color: #3a3a3a;
 }
 
 /* Heading */
-h3,
-label[for="new-task"] {
+.list-name {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -83,7 +83,7 @@ label[for="new-task"] {
   text-transform: uppercase;
 }
 
-input[type="text"] {
+.task.selected {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -96,76 +96,75 @@ input[type="text"] {
   color: #888;
 }
 
-input[type="text"]:focus {
+.task.selected:focus {
   color: #333;
 }
 
 /* New Task */
-label[for="new-task"] {
+.list-name[for="new-task"] {
   display: block;
   margin: 0 0 20px;
 }
 
-input#new-task {
+#new-task {
   width: 318px;
 }
 
 /* Task list */
-li {
+.task-row {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-li>* {
+.task-row>* {
   vertical-align: middle;
 }
 
-li>input[type="checkbox"] {
+.marker {
   margin: 0 10px;
 }
 
-li>label {
+.fixed {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li>input[type="text"] {
+.selected {
   width: 226px
 }
 
-button.delete img {
+.del-icon {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-button.delete img:hover {
+.del-icon:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completed label {
+#completed .fixed {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-ul li input[type=text] {
+.selected {
   display: none
 }
 
-ul li.edit-mode input[type=text] {
+.edit-mode .selected {
   display: inline-block;
   width: 224px
 }
 
-ul li.edit-mode label {
+.edit-mode .fixed {
   display: none;
 }
