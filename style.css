@@ -21,9 +21,11 @@ body {
 }
 
 @media (max-width:768px) {
+
   .eisenhower-container {
     text-align: center;
   }
+  
 }
 
 .tasks-container {
